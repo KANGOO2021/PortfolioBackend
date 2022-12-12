@@ -16,6 +16,10 @@ import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.Column;
+import javax.persistence.SequenceGenerator;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 
 
@@ -31,7 +35,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 public class Usuario implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator="hibernate_sequence")
+    @SequenceGenerator(name="hibernate_sequence", 
+                        sequenceName="usuario_sequence")
+    @Column(name="id", unique= true, nullable=false)
+    
     private Long id;
 
     private String username;
@@ -144,6 +153,7 @@ public class Usuario implements UserDetails {
         this.telefono = telefono;
     }
 
+    
     public boolean isEnabled() {
         return enabled;
     }

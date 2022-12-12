@@ -41,7 +41,7 @@ public class PortfoliobackendApplication implements CommandLineRunner {
 		 usuario.setPassword(bCryptPasswordEncoder.encode("1234"));
 		 usuario.setEmail("ser2004munoz@yahoo.com.ar");
 		 usuario.setTelefono("1140679793");
-		 usuario.setPerfil("foto.png");
+                 usuario.setPerfil("foto.png");
 		 
 		 Rol rol = new Rol();
 		 rol.setRolId(1L);
