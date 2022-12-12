@@ -29,11 +29,10 @@ public class PortfoliobackendApplication implements CommandLineRunner {
 		
 	}
 	
-	
 	@Override
 	public void run(String... args) throws Exception {
 
-		
+		/*
 		 Usuario usuario = new Usuario();
 		 
 		 usuario.setNombre("Sergio");
@@ -57,7 +56,7 @@ public class PortfoliobackendApplication implements CommandLineRunner {
 		 Usuario usuarioGuardado =
 		 usuarioService.guardarUsuario(usuario,usuariosRoles);
 		 System.out.println(usuarioGuardado.getUsername());
-		 
+		 */
 
 	}
 
