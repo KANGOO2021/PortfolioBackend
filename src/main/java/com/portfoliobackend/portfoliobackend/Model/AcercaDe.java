@@ -16,7 +16,7 @@ import lombok.Setter;
 public class AcercaDe implements Serializable {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     
     //@Column(nullable=false, unique=true, length=50) ej.
