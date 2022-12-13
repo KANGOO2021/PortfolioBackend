@@ -18,15 +18,8 @@ import org.hibernate.annotations.Parameter;
 public class SoftSkills implements Serializable {
     
     @Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
-    @GeneratedValue(generator="hibernate_sequence")
-    @SequenceGenerator(name="hibernate_sequence", 
-                        sequenceName="softskills_sequence")
-    @Column(name="id", unique= true, nullable=false)
-    
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    
-    //@Column(nullable=false, unique=true, length=50) ej.
     
     @Column(nullable=false, length=100)
     private String titulo;

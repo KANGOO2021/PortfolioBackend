@@ -28,10 +28,10 @@ public class PortfoliobackendApplication implements CommandLineRunner {
 		
 		
 	}
-	
+
 	@Override
 	public void run(String... args) throws Exception {
-
+        //se corre este código una vez para cargar el ADMIN
 		/*
 		 Usuario usuario = new Usuario();
 		 

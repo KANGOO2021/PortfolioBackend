@@ -15,14 +15,9 @@ import org.hibernate.annotations.Parameter;
 public class UsuarioRol {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
-    @GeneratedValue(generator="hibernate_sequence")
-    @SequenceGenerator(name="hibernate_sequence", 
-                        sequenceName="usuariorol_sequence")
-    @Column(name="id", unique= true, nullable=false)
-    
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long usuarioRolId;
-
+    
     @ManyToOne(fetch = FetchType.EAGER)
     private Usuario usuario;
 
